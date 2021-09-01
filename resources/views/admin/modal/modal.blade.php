@@ -14,10 +14,7 @@
           @include('admin.users.create_user_form')
          @elseif($argument == 3)
          @include('admin.roles.create_permission')
-
-
-        
-          @endif   
+         @endif   
         </div>  
         <!-- Modal footer -->
          

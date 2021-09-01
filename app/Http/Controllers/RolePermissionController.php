@@ -59,10 +59,10 @@ class RolePermissionController extends Controller
 
     public function assignUserRole()
     {
-        $users = User::all();
-        $roles = User::with('roles')->get();
-        dd($roles);
-        return view('admin.roles.assign_role',compact('users','roles'));
+        // $users = User::all();
+        $users = User::with('roles')->get();
+        
+        return view('admin.roles.assign_role',compact('users'));
     }
 
     

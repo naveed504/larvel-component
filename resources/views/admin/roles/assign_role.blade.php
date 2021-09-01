@@ -6,11 +6,9 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">User Roles And Permissions</h4>
-              <button class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">Create New Permission</button>
-              <?php $argument = 1; ?> 
-            
+              
             </div>       
-           @include('admin.modal.modal')
+           
             <div class="card-content">
               <div class="card-body">
                 <p class="card-text">Using the most basic table up, here’s how
@@ -33,9 +31,9 @@
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $user->name }}</td>
                             <td>
-                                @forelse($roles as $role)
+                                @forelse($user->roles as $role)
                                 <div class="form-check form-check-inline">
-                                    <label class="form-check-label float-right" for="inlineCheckbox1" >{{ $role->role->name }}</label>
+                                    <label class="form-check-label float-right" for="inlineCheckbox1" >{{ $role->name }}</label>
                                     <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="assign_role" value="option1">
                                 </div>
                                 @empty
