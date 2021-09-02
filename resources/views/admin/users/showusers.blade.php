@@ -1,15 +1,18 @@
 @extends('admin.layouts.master')
 @section('content')
+@php $argument = "addUser" @endphp       
+
 <div class="main-content container-fluid">
     <div class="row" id="basic-table">
         <div class="col-12 ">
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">Table with outer spacing</h4>
+           
               <button class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">Add User</button>
+              
             </div>
-            <?php $argument = 2?>        
-            @include('admin.modal.modal')
+           
             <div class="card-content">
               <div class="card-body">
                 <p class="card-text">Using the most basic table up, here’s how
@@ -23,24 +26,19 @@
                         <th>#No</th>
                         <th>NAME</th>
                         <th>Email</th>
-                        <th>Authoritize</th>
+                       
                       </tr>
                     </thead>
                     <tbody>
-                     
-                      @forelse($users as $user)
-                      <tr>
-                        <td class="text-bold-500">{{ $loop->iteration }}</td>
-                        <td>{{ $user->name }}</td>
-                        <td class="text-bold-500">{{ $user->email }}</td> 
-                        @foreach ($user->roles as $role)
-                        <td class="text-bold-500">{{ $role->name }}</td>    
-                        @endforeach  
-                        @empty
-                        <p>"User Not Found"</p>                     
-                      </tr>
-                      @endforelse
-                      
+                   
+                    @foreach ($users as $user)
+                   <tr>
+                     <td>{{ $loop->iteration }}</td>
+                    <td>{{ ($user->name) }}</td>
+                    <td>{{ ($user->email) }}</td>
+                  </tr>
+                        
+                    @endforeach
                      
                     </tbody>
                   </table>
@@ -52,7 +50,7 @@
        
     </div>
 </div>
-
+@include('admin.modal.modal')
 @endsection
 @section('secript')
 <script>

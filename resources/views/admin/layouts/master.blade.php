@@ -21,7 +21,7 @@
         <div id="sidebar" class='active'>
             <div class="sidebar-wrapper active">
     <div class="sidebar-header">
-        <img src="{{ asset('adminassets/assets/images/logos.png')}} " class="img img-circle"  style="height:170px;width:200px;" alt="" srcset="">
+        <img src="{{ asset('adminassets/assets/images/logo.svg')}} " class="img img-circle"  style="height:170px;width:200px;" alt="" srcset="">
     </div>
     @include('admin.layouts.sidebar')
     <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>

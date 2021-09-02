@@ -6,8 +6,7 @@
           <div class="card">
             <div class="card-header">
               <h4 class="card-title">User Roles And Permissions</h4>
-              <button class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">Create New Role</button>
-              <?php $argument = 1; ?> 
+             
             
             </div>       
            @include('admin.modal.modal')

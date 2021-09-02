@@ -8,12 +8,10 @@
         </div>  
         <!-- Modal body -->
         <div class="modal-body">
-          @if($argument ==1)
-          @include('admin.roles.create_role')
-          @elseif($argument == 2)        
-          @include('admin.users.create_user_form')
-         @elseif($argument == 3)
-         @include('admin.roles.create_permission')
+          
+          @if($argument == "addUser")  
+           
+          @include('admin.users.create_user')
          @endif   
         </div>  
         <!-- Modal footer -->

@@ -40,4 +40,18 @@ Route::resource('manage-user',UserController::class);
 });
 
 
+Route::get('registeruser', [RolePermissionController::class, 'registeruser'])->name('registeruser');
+
+Route::get('registeruser', function(){
+    return view('admin.authenticate.register');
+});
+Route::get('loginuser', function(){
+    return "ok";
+});
+Route::get('forgotpassword', function(){
+    return view('admin.authenticate.forgot');
+});
+
+
+
 

@@ -30,8 +30,19 @@
     @endcomponent
 
 @component('admin.layouts.sidebar_link')
-    @slot('link') "#" @endslot
-    @slot('icon')<i data-feather="home" width="20"></i> @endslot
-    @slot('name')Dashboard @endslot
+    @slot('link')  @endslot
+    @slot('icon')<i data-feather="key" width="20"></i> @endslot
+    @slot('name')Login @endslot
 @endcomponent
-   
+
+@component('admin.layouts.sidebar_link')
+    @slot('link') "#" @endslot
+    @slot('icon')<i data-feather="book" width="20"></i> @endslot
+    @slot('name')Register @endslot
+@endcomponent
+
+@component('admin.layouts.sidebar_link')
+    @slot('link') "#" @endslot
+    @slot('icon')<i data-feather="lock" width="20"></i> @endslot
+    @slot('name')Forgot Password @endslot
+@endcomponent

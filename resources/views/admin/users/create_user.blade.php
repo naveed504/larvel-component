@@ -1,8 +1,9 @@
 
                 <form action="{{ route('register') }}" method="post" class="form form-vertical">
                     @csrf
+                   
                 <div class="form-body">
-                    <div class="row">
+                    <div class="row"> 
                         <div class="col-12">
                             <div class="form-group has-icon-left">
                                 <label for="first-name-icon">First Name</label>
@@ -13,7 +14,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
                     <div class="col-12">                        
                         <div class="form-group has-icon-left">
                             <label for="email-id-icon">Email</label>
@@ -36,6 +36,24 @@
                             </div>
                         </div>
                     </div>      
+                        </div>
+                    <div class="col-12">  
+                       
+                        @dump($user)
+                       
+                        <div class="form-group has-icon-left">
+                            <label for="mobile-id-icon">Select Role</label>
+                            <div class="position-relative">
+                                
+                                <select class="form-control" name="role_name">
+                                  
+                                  
+                                    
+                                </select>
+                               
+                            </div>
+                        </div>
+                    </div>   
                     <div class="col-12">
                         <div class='form-check'>
                             <div class="checkbox mt-2">

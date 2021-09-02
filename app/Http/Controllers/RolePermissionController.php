@@ -65,5 +65,11 @@ class RolePermissionController extends Controller
         return view('admin.roles.assign_role',compact('users'));
     }
 
+    public function registeruser()
+    {
+        return view('admin.authenticate.register');
+
+    }
+
     
 }
