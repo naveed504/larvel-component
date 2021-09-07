@@ -22,3 +22,5 @@ class Controller extends BaseController
         Toastr::error($message);
     }
 }
+
+
