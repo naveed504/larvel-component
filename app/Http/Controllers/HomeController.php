@@ -33,5 +33,6 @@ class HomeController extends Controller
         // $permission->assignRole($role);
        
         return view('home');
+        
     }
 }
