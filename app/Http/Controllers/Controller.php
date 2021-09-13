@@ -20,6 +20,8 @@ class Controller extends BaseController
     public function errorMessage($message)
     {
         Toastr::error($message);
+        
+        
     }
 }
 
